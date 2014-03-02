@@ -1,0 +1,263 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_FSECONOMY           ICON                    ".\\money.ico"
+IDI_SMALL               ICON                    ".\\small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_FSECONOMY MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Account",                    IDM_ACCOUNT
+        MENUITEM "&Website",                    ID_FILE_WEBSITE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Action", GRAYED
+    BEGIN
+        MENUITEM "Test aircraft",               ID_ACTION_TESTAIRCRAFT
+        MENUITEM "Start flight",                ID_ACTION_START, GRAYED
+        MENUITEM "Cancel flight",               ID_ACTION_CANCEL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_FSECONOMY ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 170, 52
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System", 0, 0, 0x0
+BEGIN
+    ICON            IDI_FSECONOMY,IDC_MYICON,7,12,20,20
+    LTEXT           "FS Economy Version 1.1.4",IDC_STATIC,28,12,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2006 Marty Bochane",IDC_STATIC,28,22,119,8
+    DEFPUSHBUTTON   "OK",IDOK,132,8,30,11,WS_GROUP
+END
+
+IDD_ACCOUNTBOX DIALOGEX 0, 0, 186, 82
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Account details"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,61,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,61,50,14
+    EDITTEXT        IDC_USER,72,12,97,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,72,30,97,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "User Id",IDC_STATIC,20,14,24,8
+    LTEXT           "Password",IDC_STATIC,12,32,32,8
+END
+
+IDD_WEIGHT DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Weight"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,25,66,49,13,WS_DISABLED
+    LTEXT           "Current weight",IDC_STATIC,13,11,49,8
+    LTEXT           "Required weight",IDC_STATIC,13,21,53,8
+    LTEXT           "100",IDC_CURRENTWEIGHT,82,11,65,8
+    LTEXT           "100",IDC_REQUIRED,82,21,63,8
+    LTEXT           "100",IDC_PAYLOAD,82,31,69,8
+    PUSHBUTTON      "Ignore loading",IDCANCEL,100,66,59,13
+    LTEXT           "Required payload",IDC_STATIC,13,30,57,8
+    LTEXT           "100",IDC_ADVICE,13,47,154,8
+END
+
+IDD_REPORTING DIALOGEX 0, 0, 186, 130
+STYLE DS_SYSMODAL | DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "FS Economy"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,67,101,50,14,WS_DISABLED
+    LTEXT           "Logging flight",IDC_STATIC,7,14,172,58
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,24,78,138,15
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_ACCOUNTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_WEIGHT, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 179
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_REPORTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 123
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,99,0,1
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Marty Bochane"
+            VALUE "FileDescription", "FSeconomy agent"
+            VALUE "FileVersion", "0, 99, 0, 1"
+            VALUE "InternalName", "FSeconomy"
+            VALUE "LegalCopyright", "Copyright (C) 2004"
+            VALUE "OriginalFilename", "FSeconomy.exe"
+            VALUE "ProductName", "FSeconomy agent"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "FSEconomy"
+    IDC_FSECONOMY           "FSECONOMY"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
